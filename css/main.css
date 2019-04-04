@@ -42,8 +42,9 @@ body{
 
 h1{
   font-weight: lighter;
-  color: grey;
-  margin-top: 2em;
+  color: black;
+  margin-top: 1em;
+  margin-left: 1.5em;
 }
 
 .grid-contain-1,
@@ -64,4 +65,13 @@ h1{
   margin: auto;
   border: 1px solid lightgrey;
   border-radius: 10px;
+}
+
+
+img{
+  width: 32%;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-top: 1em;
+  margin-left: 1em;
 }
