@@ -65,12 +65,24 @@ h1{
   margin: auto;
   border: 1px solid lightgrey;
   border-radius: 10px;
+  display: flex;
+
+}
+
+.grid-hover {
+  transition: all .6s ease-out;
+}
+
+.grid-hover:hover{
+  border: 1px solid #2C2C54;
+  transform: scale(1.05);
+  opacity: .9;
 }
 
 
 img{
-  width: 32%;
-  border: 1px solid white;
+  width: 80%;
+  border: 1px solid #EBF5EE;
   border-radius: 50%;
   margin-top: 1em;
   margin-left: 1em;

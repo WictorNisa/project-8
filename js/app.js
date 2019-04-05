@@ -9,14 +9,12 @@ fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&resu
 
 
 function generateImg(data){
-  people.forEach((person) => {
+  people.forEach((person, index) => {
     const avatarImg = person.picture.large;
-    let avatar = document.createElement('img');
-    avatar.setAttribute('src', avatarImg);
     let html = `
-      <img src="${avatar}">
+      <img src="${avatarImg}">
     `;
 
-    imgHolder.innerHTML = html;
+    imgHolder[index].innerHTML = html;
   });
 }
