@@ -66,24 +66,47 @@ h1{
   border: 1px solid lightgrey;
   border-radius: 10px;
   display: flex;
-
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .grid-hover {
   transition: all .6s ease-out;
 }
 
-.grid-hover:hover{
+.grid-hover:hover {
   border: 1px solid #2C2C54;
   transform: scale(1.05);
-  opacity: .9;
+  opacity: .8;
 }
 
+.avatar-name {
+  margin-top: 2.2em;
+  margin-left: 1em;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: #2C2C54;
+}
 
-img{
+.avatar-email {
+  margin-top: 0;
+  margin-bottom: .65em;
+  font-size: .9em;
+  color: #B2B2C0;
+}
+
+.avatar-city {
+  margin-top: 0;
+  font-size: .9em;
+  color: #B2B2C0;
+}
+
+img {
   width: 80%;
   border: 1px solid #EBF5EE;
   border-radius: 50%;
-  margin-top: 1em;
+  margin-top: .6em;
   margin-left: 1em;
 }
