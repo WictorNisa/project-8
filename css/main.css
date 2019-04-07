@@ -29,7 +29,7 @@ body{
 
 .main-wrapper{
   width: 95%;
- margin: auto;
+  margin: auto;
 }
 
 .grid-wrap{
@@ -78,7 +78,6 @@ h1{
 .grid-hover:hover {
   border: 1px solid #2C2C54;
   transform: scale(1.05);
-  opacity: .8;
 }
 
 .avatar-name {
@@ -93,12 +92,14 @@ h1{
 .avatar-email {
   margin-top: 0;
   margin-bottom: .65em;
+  padding-left: .5em;
   font-size: .9em;
   color: #B2B2C0;
 }
 
 .avatar-city {
   margin-top: 0;
+  padding-left: .5em;
   font-size: .9em;
   color: #B2B2C0;
 }
@@ -109,4 +110,28 @@ img {
   border-radius: 50%;
   margin-top: .6em;
   margin-left: 1em;
+}
+
+
+
+
+.modal{
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-block-1 {
+  width: 350px;
+  height: 450px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: auto;
 }

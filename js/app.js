@@ -1,5 +1,6 @@
 const imgHolder = document.querySelectorAll('.img-holder');
 const textHolder = document.querySelectorAll('.text-holder');
+const modalView = document.querySelectorAll('.modal-view');
 
 let people = [];
 fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&results=12')
