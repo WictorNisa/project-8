@@ -132,6 +132,29 @@ img {
   width: 350px;
   height: 450px;
   background-color: #ffffff;
+  border: 1px solid #E1E2EF;
   border-radius: 10px;
   margin: auto;
+}
+
+.close {
+  float: right;
+  margin-top: 1em;
+  margin-right: 1em;
+  background-color: #E1E2EF;
+  color: grey;
+  border: 1px solid #625F63;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: 152px;
+  right: 522px;
+  position: fixed;
+  transition: all .3s linear;
+}
+
+.close:hover{
+  color: white;
+  background-color: #440D0F;
+  border: 1px solid #ffffff;
 }

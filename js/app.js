@@ -7,7 +7,8 @@ fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&resu
   .then(response => response.json())
   .then (data => people = data.results)
   .then(data => generateImg(data))
-  .then(data => generateName(data));
+  .then(data => generateName(data))
+  .then(data => generateModalInfo(data));
 
 
 function generateImg(data){
@@ -36,8 +37,14 @@ function generateName(data) {
   });
 }
 
+function generateModalInfo(data) {
+  people.forEach((person, index) => {
+    const cell = person.phone;
+    const street = person.location.street;
+    const city = person.location.city;
+    const state = person.location.state;
+    const postcode = person.location.postcode;
+    const bithday = person.dob.date;
 
-function capFirst(string)
-{
-    return string.charAt(0).toUpperCase() + string.slice(1);
+  });
 }
