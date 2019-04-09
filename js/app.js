@@ -13,8 +13,8 @@ fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&resu
   .then(response => response.json())
   .then (data => people = data.results)
   .then(data => generateImg(data))
-  .then(data => generateName(data));
-  // .then(data => generateModalInfo(data));
+  .then(data => generateName(data))
+  .then(data => generateModalInfo(data));
 
 
 function generateImg(data){
@@ -42,7 +42,7 @@ function generateName(data) {
   });
 }
 
-function generateModalInfo(index) {
+function generateModalInfo(data) {
   people.forEach((person, index) => {
     const avatarImg = person.picture.large;
     const firstName = person.name.first;
@@ -55,7 +55,7 @@ function generateModalInfo(index) {
     const postcode = person.location.postcode;
     const birthday = person.dob.date;
     let infoHtml = `
-      <img src="${avatarImg}">
+      <img class="modal-avatar" src="${avatarImg}">
       <p>${firstName} ${lastName}</P>
       <p>${email}</p>
       <p>${cell}</p>
@@ -67,16 +67,13 @@ function generateModalInfo(index) {
 }
 
 function openModal(e) {
-  if(e.target.classList.contains('grid-contain')) {
+  let gridContain = e.target.closest('div.grid-contain');
+  if(gridContain) {
     modalBlock.style.display = 'flex';
     modal.style.display = 'flex';
     console.log(e.target);
     return;
-    }
-    if(e.target === e.target.closest('index')) {
-      generateModalInfo();
-    }
-
+      }
     }
 
 
