@@ -5,6 +5,7 @@ const gridSelect = document.getElementById('grid-select');
 const closeX = document.getElementById('close');
 const modalBlock = document.querySelector('.modal-block');
 const modal = document.querySelector('.modal');
+const index = document.querySelectorAll('[data-index]');
 
 
 let people = [];
@@ -43,6 +44,10 @@ function generateName(data) {
 
 function generateModalInfo(index) {
   people.forEach((person, index) => {
+    const avatarImg = person.picture.large;
+    const firstName = person.name.first;
+    const lastName = person.name.last;
+    const email = person.email;
     const cell = person.phone;
     const street = person.location.street;
     const city = person.location.city;
@@ -50,6 +55,9 @@ function generateModalInfo(index) {
     const postcode = person.location.postcode;
     const birthday = person.dob.date;
     let infoHtml = `
+      <img src="${avatarImg}">
+      <p>${firstName} ${lastName}</P>
+      <p>${email}</p>
       <p>${cell}</p>
       <p>${street} ${state} ${city} ${postcode}</p>
       <p>Birthday: ${birthday}</p>
@@ -59,14 +67,16 @@ function generateModalInfo(index) {
 }
 
 function openModal(e) {
-  if(e.target.classList.contains('grid-hover')) {
+  if(e.target.classList.contains('grid-contain')) {
     modalBlock.style.display = 'flex';
     modal.style.display = 'flex';
-    console.log('Connected');
+    console.log(e.target);
+    return;
     }
-    if(e.target.matches(index)) {
-      generateModalInfo(index);
-      }
+    if(e.target === e.target.closest('index')) {
+      generateModalInfo();
+    }
+
     }
 
 

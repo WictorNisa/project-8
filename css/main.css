@@ -47,18 +47,7 @@ h1{
   margin-left: 1.5em;
 }
 
-.grid-contain-1,
-.grid-contain-2,
-.grid-contain-3,
-.grid-contain-4,
-.grid-contain-5,
-.grid-contain-6,
-.grid-contain-7,
-.grid-contain-8,
-.grid-contain-9,
-.grid-contain-10,
-.grid-contain-11,
-.grid-contain-12{
+.grid-contain{
   background-color: #FAFAFF;
   width: 88%;
   height: 100%;
@@ -69,13 +58,10 @@ h1{
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-}
-
-.grid-hover {
   transition: all .6s ease-out;
 }
 
-.grid-hover:hover {
+.grid-contain:hover {
   border: 1px solid #2C2C54;
   transform: scale(1.05);
 }
@@ -132,6 +118,8 @@ img {
 
 .modal-view{
   width: 90%;
+  display: flex;
+  justify-content:center;
   align-items: center;
   margin: auto;
 }
@@ -152,7 +140,6 @@ img {
 }
 
 #close {
-  float: right;
   margin-top: 1em;
   margin-right: 1em;
   background-color: #E1E2EF;
@@ -161,10 +148,8 @@ img {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  top: 152px;
-  right: 522px;
-  position: fixed;
   transition: all .3s linear;
+  float: right;
 }
 
 #close:hover{
