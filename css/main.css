@@ -126,18 +126,32 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+
 }
 
-.modal-block-1 {
+.modal-view{
+  width: 90%;
+  align-items: center;
+  margin: auto;
+}
+
+.modal-avatar{
+  margin-top: 1em;
+  width: 50%;
+}
+
+.modal-block {
   width: 350px;
   height: 450px;
   background-color: #ffffff;
   border: 1px solid #E1E2EF;
   border-radius: 10px;
   margin: auto;
+  display: none;
 }
 
-.close {
+#close {
   float: right;
   margin-top: 1em;
   margin-right: 1em;
@@ -153,7 +167,7 @@ img {
   transition: all .3s linear;
 }
 
-.close:hover{
+#close:hover{
   color: white;
   background-color: #440D0F;
   border: 1px solid #ffffff;
