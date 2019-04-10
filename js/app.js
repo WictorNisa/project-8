@@ -1,13 +1,11 @@
 const imgHolder = document.querySelectorAll('.img-holder');
 const textHolder = document.querySelectorAll('.text-holder');
 // const modalView = document.querySelectorAll('.modal-view');
-const modalViewer = document.querySelector('.modal-view');
+const modalViewer = document.querySelectorAll('.modal-view');
 const gridSelect = document.getElementById('grid-select');
 const closeX = document.getElementById('close');
 const modalBlock = document.querySelector('.modal-block');
 const modal = document.querySelector('.modal');
-
-
 
 let people = [];
 fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&results=12')
@@ -44,7 +42,8 @@ function generateName(data) {
 }
 
 function generateModalInfo(data) {
-  people.forEach((person, index) => {
+  let people =[];
+  for(let i = 0; i < people.length; i++) {
     const avatarImg = person.picture.large;
     const firstName = person.name.first;
     const lastName = person.name.last;
@@ -63,8 +62,8 @@ function generateModalInfo(data) {
         <p>${street} ${state} ${city} ${postcode}</p>
         <p>Birthday: ${birthday}</p>
       `;
-        modalViewer.innerHTML = infoHtml;
-  });
+        modalViewer[i].innerHTML = infoHtml;
+  }
 }
 
 function openModal(e) {
