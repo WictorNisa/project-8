@@ -1,11 +1,12 @@
 const imgHolder = document.querySelectorAll('.img-holder');
 const textHolder = document.querySelectorAll('.text-holder');
-const modalView = document.querySelectorAll('.modal-view');
+// const modalView = document.querySelectorAll('.modal-view');
+const modalViewer = document.querySelector('.modal-view');
 const gridSelect = document.getElementById('grid-select');
 const closeX = document.getElementById('close');
 const modalBlock = document.querySelector('.modal-block');
 const modal = document.querySelector('.modal');
-const index = document.querySelectorAll('[data-index]');
+
 
 
 let people = [];
@@ -54,15 +55,15 @@ function generateModalInfo(data) {
     const state = person.location.state;
     const postcode = person.location.postcode;
     const birthday = person.dob.date;
-    let infoHtml = `
-      <img class="modal-avatar" src="${avatarImg}">
-      <p>${firstName} ${lastName}</P>
-      <p>${email}</p>
-      <p>${cell}</p>
-      <p>${street} ${state} ${city} ${postcode}</p>
-      <p>Birthday: ${birthday}</p>
-    `;
-      modalView[index].innerHTML = infoHtml;
+      let infoHtml = `
+        <img class="modal-avatar" src="${avatarImg}">
+        <p>${firstName} ${lastName}</P>
+        <p>${email}</p>
+        <p>${cell}</p>
+        <p>${street} ${state} ${city} ${postcode}</p>
+        <p>Birthday: ${birthday}</p>
+      `;
+        modalViewer.innerHTML = infoHtml;
   });
 }
 
@@ -74,6 +75,9 @@ function openModal(e) {
     console.log(e.target);
     return;
       }
+    // if(e.target.) {
+    //
+    // }
     }
 
 
@@ -85,6 +89,7 @@ function closeModal(e) {
   }
     return false;
 }
+
 
 
 gridSelect.addEventListener('click', openModal);

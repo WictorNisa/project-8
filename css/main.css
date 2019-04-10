@@ -143,18 +143,17 @@ img {
 #close {
   margin-top: 1em;
   margin-right: 1em;
-  background-color: #E1E2EF;
-  color: grey;
+  background-color: #ffffff;
+  color: black;
   border: 1px solid #625F63;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   transition: all .3s linear;
-  float: right;
 }
 
 #close:hover{
   color: white;
   background-color: #440D0F;
-  border: 1px solid #ffffff;
+  border: 1px solid #2C1320;
 }
