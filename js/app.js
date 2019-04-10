@@ -4,8 +4,9 @@ const textHolder = document.querySelectorAll('.text-holder');
 const modalViewer = document.querySelectorAll('.modal-view');
 const gridSelect = document.getElementById('grid-select');
 const closeX = document.getElementById('close');
-const modalBlock = document.querySelector('.modal-block');
+// const modalBlock = document.querySelector('.modal-block');
 const modal = document.querySelector('.modal');
+
 
 let people = [];
 fetch('https://randomuser.me/api/?inc=name,picture,email,location,phone,dob&results=12')
