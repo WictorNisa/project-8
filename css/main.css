@@ -113,16 +113,6 @@ img {
   justify-content: center;
   align-items: center;
   display: none;
-
-}
-
-.modal-view{
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  margin: auto;
 }
 
 .modal-avatar{
@@ -130,15 +120,25 @@ img {
   width: 50%;
 }
 
-.modal-block {
+#modal-text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 350px;
-  height: 450px;
+  height: 535px;
   background-color: #ffffff;
   border: 1px solid #E1E2EF;
   border-radius: 10px;
   margin: auto;
-  display: none;
 }
+
+.modal-text{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 #close {
   margin-top: 1em;
@@ -146,8 +146,8 @@ img {
   background-color: #ffffff;
   color: black;
   border: 1px solid #625F63;
-  border-radius: 50%;
-  width: 30px;
+  border-radius: 5px;
+  width: 100px;
   height: 30px;
   transition: all .3s linear;
 }
