@@ -55,7 +55,7 @@ function generateModalInfo(data) {
         <p>${firstName} ${lastName}</P>
         <p class="modal-border">${email}</p>
         <p>${cell}</p>
-        <p>${street} ${state} ${city} ${postcode}</p>
+        <p>${street} <br /> ${state} ${city} ${postcode}</p>
         <p>Birthday: ${formattedBirthday}</p>
         <button class="close" id="close">Close!</button>
       </div>
