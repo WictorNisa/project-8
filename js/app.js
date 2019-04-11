@@ -48,6 +48,7 @@ function generateModalInfo(data) {
     const state = person.location.state;
     const postcode = person.location.postcode;
     const birthday = person.dob.date;
+    const formattedBirthday = birthday.substring(0, 10);
       let infoHtml = `
       <div class="modal-text">
         <img class="modal-avatar" src="${avatarImg}">
@@ -55,7 +56,7 @@ function generateModalInfo(data) {
         <p class="modal-border">${email}</p>
         <p>${cell}</p>
         <p>${street} ${state} ${city} ${postcode}</p>
-        <p>Birthday: ${birthday}</p>
+        <p>Birthday: ${formattedBirthday}</p>
         <button class="close" id="close">Close!</button>
       </div>
       `;
